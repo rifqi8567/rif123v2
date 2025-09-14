@@ -294,22 +294,7 @@ function initializeFilters() {
         });
     });
     
-    // Certificate filters
-    const certificateFilters = document.querySelectorAll('.certificates-filter .filter-btn');
-    const certificateCards = document.querySelectorAll('.certificate-card');
-    
-    certificateFilters.forEach(filter => {
-        filter.addEventListener('click', function() {
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Update active filter
-            certificateFilters.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter certificates
-            filterItems(certificateCards, filterValue);
-        });
-    });
+
 }
 
 function filterItems(items, filterValue) {

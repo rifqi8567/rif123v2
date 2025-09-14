@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rifqi | Certificates</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href=\'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css\' rel=\'stylesheet\'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="loading-text">
+            <span>Loading</span>
+            <span class="dots">...</span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">MRTF</span>
+                    <div class="logo-dot"></div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-section="home">
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#about" class="nav-link" data-section="about">
+                    <span class="nav-text">About</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#skills" class="nav-link" data-section="skills">
+                    <span class="nav-text">Skills</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#projects" class="nav-link" data-section="projects">
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="certificates.html" class="nav-link active" data-section="certificates">
+                    <span class="nav-text">Certificates</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#experience" class="nav-link" data-section="experience">
+                    <span class="nav-text">Experience</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#contact" class="nav-link" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bx bx-moon theme-icon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My achievements</span>
+                <h2 class="section-title">All <span class="gradient-text">Certificates</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="certificates-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Certificates</button>
+                <button class="filter-btn" data-filter="course">Course Certificates</button>
+                <button class="filter-btn" data-filter="competency">Competency</button>
+                <button class="filter-btn" data-filter="participation">Participation</button>
+            </div>
+            
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" data-category="participation" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert1.png" alt="Tutormy.id Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/16UsIqlaVCjFFfi92ZuBhd5bWiGiR4Uyy/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Tutormy.id</h3>
+                        <p class="certificate-issuer">Issued by: Tutormy.id</p>
+                        <div class="certificate-type">Participation</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert2.jpg" alt="TOAFL Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1gFBlCsKgVcCIZmcYg6J8xd-9duA50Rzd/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">TOAFL</h3>
+                        <p class="certificate-issuer">Issued by: Al-Azhar Pare</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert3.jpg" alt="Google Play Store Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://www.credential.net/83e7ed6e-cfb6-471c-a0b5-a1178177de2c" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Google Play Store</h3>
+                        <p class="certificate-issuer">Issued by: Google</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert4.jpg" alt="Intro Coding Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/17gNOTSozEINbxR-QpUh3I6wPz1bwIhjT/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Intro Coding</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 5 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert5.jpg" alt="CSS Dasar Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1skJ7-Dt_6G3eKBjCNlPrL-dJo7mNBSXI/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">CSS Dasar</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 6 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="600">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert6.jpg" alt="HTML Dasar Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1jRTWjHM_nm32e1pg93zEgDELwbhhvsOk/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">HTML Dasar</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 7 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="700">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert1.png" alt="JavaScript Fundamentals Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">JavaScript Fundamentals</h3>
+                        <p class="certificate-issuer">Issued by: Codecademy</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 8 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="800">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert2.jpg" alt="Laravel Professional Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Laravel Professional</h3>
+                        <p class="certificate-issuer">Issued by: Laravel</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 9 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="900">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert3.jpg" alt="Flutter Development Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Flutter Development</h3>
+                        <p class="certificate-issuer">Issued by: Google Developers</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 10 -->
+                <div class="certificate-card" data-category="participation" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert4.jpg" alt="Tech Conference 2024 Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Tech Conference 2024</h3>
+                        <p class="certificate-issuer">Issued by: Tech Indonesia</p>
+                        <div class="certificate-type">Participation</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 11 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert5.jpg" alt="MySQL Database Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">MySQL Database</h3>
+                        <p class="certificate-issuer">Issued by: Oracle</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Additional Certificate 12 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert6.jpg" alt="React.js Mastery Certificate">
+                        <div class="certificate-overlay">
+                            <a href="#" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">React.js Mastery</h3>
+                        <p class="certificate-issuer">Issued by: Meta</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates-cta" data-aos="fade-up" data-aos-delay="700">
+                <p>Explore more of my certifications and achievements.</p>
+                <a href="#" class="btn btn-outline">
+                    <span>View All Certificates</span>
+                    <i class="bx bx-award"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Muhammad Rifqi. All rights reserved.</p>
+                    <p>Designed & Built with ❤️ by Muhammad Rifqi</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="index.html#about" class="footer-link">About</a>
+                    <a href="index.html#projects" class="footer-link">Projects</a>
+                    <a href="index.html#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="bx bx-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/certificates.js"></script>
+</body>
+</html>
+
