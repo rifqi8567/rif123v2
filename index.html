@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rifqi | Full Stack Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="loading-text">
+            <span>Loading</span>
+            <span class="dots">...</span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                    <span class="logo-text">MRTF</span>
+                    <div class="logo-dot"></div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="nav-text">About</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <span class="nav-text">Skills</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#certificates" class="nav-link" data-section="certificates">
+                    <span class="nav-text">Certificates</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <span class="nav-text">Experience</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bx bx-moon theme-icon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Muhammad</span>
+                    <span class="title-line gradient-text">Rifqi</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    I craft exceptional digital experiences through innovative web and mobile applications. 
+                    Passionate about clean code, modern design, and creating solutions that make an impact.
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View My Work</span>
+                        <i class="bx bx-code-alt"></i>
+                    </a>
+                </div>
+                <div class="hero-social" data-aos="fade-up" data-aos-delay="700">
+                    <a href="https://github.com/rifqi8567" class="social-link" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhamnadrifqi/" class="social-link" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/Muhamma38832065" class="social-link" target="_blank">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/muhammad_rifqy_/" class="social-link" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-container">
+                    <div class="image-background"></div>
+                    <img src="assets/images/profile.jpg" alt="Muhammad Rifqi" class="profile-image">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Available for work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="bx bx-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get to know me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/about.jpg" alt="About Muhammad Rifqi" class="about-img">
+                        <div class="image-decoration">
+                            <div class="decoration-shape decoration-1"></div>
+                            <div class="decoration-shape decoration-2"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h3 class="about-title">Who am I?</h3>
+                    <p class="about-description">
+                        I'm a passionate Full Stack Developer with strong experience in building mobile and web applications using Laravel and Flutter. 
+                        I focus on clean architecture, scalable API development, and seamless user experience.
+                    </p>
+                    <p class="about-description">
+                        I enjoy working with BLoC state management, integrating RESTful APIs, and building interactive UI in Flutter. 
+                        Backend-wise, I'm confident in handling authentication, complex CRUD logic, and database design with Laravel.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="20">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="2">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">Certificates</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-actions">
+                        <a href="https://drive.google.com/file/d/1QNN8CP2Py5VQe8y_EMzl3_uwgyIYuXI4/view" class="btn btn-primary" target="_blank">
+                            <span>Download CV</span>
+                            <i class="bx bx-download"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Let's Talk</span>
+                            <i class="bx bx-message-dots"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="bx bx-code-alt"></i>
+                            </div>
+                            <h3 class="category-title">Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Tailwind CSS</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="bx bx-server"></i>
+                            </div>
+                            <h3 class="category-title">Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP & Laravel</span>
+                                    <span class="skill-percentage">93%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="93"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">RESTful APIs</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="bx bx-mobile-alt"></i>
+                            </div>
+                            <h3 class="category-title">Mobile Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Flutter & Dart</span>
+                                    <span class="skill-percentage">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">BLoC Pattern</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">API Integration</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="tech-title">Technologies I Work With</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tech-icon">
+                                <i class="bx bxl-html5"></i>
+                            </div>
+                            <span class="tech-name">HTML5</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="tech-icon">
+                                <i class="bx bxl-css3"></i>
+                            </div>
+                            <span class="tech-name">CSS3</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tech-icon">
+                                <i class="bx bxl-javascript"></i>
+                            </div>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="tech-icon">
+                                <i class="bx bxl-react"></i>
+                            </div>
+                            <span class="tech-name">React</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tech-icon">
+                                <i class="bx bxl-php"></i>
+                            </div>
+                            <span class="tech-name">PHP</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="tech-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel">
+                            </div>
+                            <span class="tech-name">Laravel</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="tech-icon">
+                                <i class="bx bxl-flutter"></i>
+                            </div>
+                            <span class="tech-name">Flutter</span>
+                        </div>
+                        <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+                            <div class="tech-icon">
+                                <i class="bx bxl-nodejs"></i>
+                            </div>
+                            <span class="tech-name">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web api" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/project1.png" alt="E-commerce API">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://marketzy.rifchi.my.id" class="project-link" target="_blank">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/e-commerce" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3 class="project-title">E-commerce API</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce application with product management, order processing, and an intuitive user interface built with Laravel and Filament.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Filament</span>
+                            <span class="tech-tag">Livewire</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/project2.png" alt="Online Library">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://perpustakaan.rifchi.my.id" class="project-link" target="_blank">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/Perpustakaan" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3 class="project-title">Online Library</h3>
+                        <p class="project-description">
+                            A smart online library for students and readers to access books, organize collections, and track their reading progress with ease.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Mazzer</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/project3.png" alt="Personal Finance Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://keuangan.rifchi.my.id" class="project-link" target="_blank">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/data" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3 class="project-title">Personal Finance Dashboard</h3>
+                        <p class="project-description">
+                            Interactive personal finance dashboard with live charts and income & expense summaries for better financial management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Filament</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/images/project4.png" alt="E-commerce Mobile App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://rifqi8567.github.io/marketzy" class="project-link" target="_blank">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/marketzy" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile Application</div>
+                        <h3 class="project-title">E-commerce Mobile App</h3>
+                        <p class="project-description">
+                            A clean and simple e-commerce app for browsing, filtering, and buying products online with smooth user experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">BLoC</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/images/project5.png" alt="Travel Ticket App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/tiket" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile Application</div>
+                        <h3 class="project-title">Travel Ticket App</h3>
+                        <p class="project-description">
+                            A travel ticket booking app for discovering destinations and ordering tickets easily with intuitive interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Laravel API</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="web api" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="assets/images/project6.png" alt="Travel API">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://tiket.rifchi.my.id/" class="project-link" target="_blank">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                                <a href="https://github.com/rifqi8567/tiket" class="project-link" target="_blank">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">API Development</div>
+                        <h3 class="project-title">Travel Ticket API</h3>
+                        <p class="project-description">
+                            A RESTful API for travel ticket booking system with comprehensive endpoints for destinations, bookings, and user management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">JWT Auth</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta" data-aos="fade-up" data-aos-delay="700">
+                <p>Interested in seeing more of my work?</p>
+                <a href="https://github.com/rifqi8567" class="btn btn-outline" target="_blank">
+                    <span>View All Projects</span>
+                    <i class="bx bxl-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My achievements</span>
+                <h2 class="section-title">Certificates & <span class="gradient-text">Awards</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="certificates-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Certificates</button>
+                <button class="filter-btn" data-filter="course">Course Certificates</button>
+                <button class="filter-btn" data-filter="competency">Competency</button>
+                <button class="filter-btn" data-filter="participation">Participation</button>
+            </div>
+            
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" data-category="participation" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert1.png" alt="Tutormy.id Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/16UsIqlaVCjFFfi92ZuBhd5bWiGiR4Uyy/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Tutormy.id</h3>
+                        <p class="certificate-issuer">Issued by: Tutormy.id</p>
+                        <div class="certificate-type">Participation</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert2.jpg" alt="TOAFL Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1gFBlCsKgVcCIZmcYg6J8xd-9duA50Rzd/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">TOAFL</h3>
+                        <p class="certificate-issuer">Issued by: Al-Azhar Pare</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="certificate-card" data-category="competency" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert3.jpg" alt="Google Play Store Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://www.credential.net/83e7ed6e-cfb6-471c-a0b5-a1178177de2c" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Google Play Store</h3>
+                        <p class="certificate-issuer">Issued by: Google</p>
+                        <div class="certificate-type">Competency</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert4.jpg" alt="Intro Coding Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/17gNOTSozEINbxR-QpUh3I6wPz1bwIhjT/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">Intro Coding</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 5 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert5.jpg" alt="CSS Dasar Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1skJ7-Dt_6G3eKBjCNlPrL-dJo7mNBSXI/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">CSS Dasar</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 6 -->
+                <div class="certificate-card" data-category="course" data-aos="fade-up" data-aos-delay="600">
+                    <div class="certificate-image">
+                        <img src="assets/images/cert6.jpg" alt="HTML Dasar Certificate">
+                        <div class="certificate-overlay">
+                            <a href="https://drive.google.com/file/d/1jRTWjHM_nm32e1pg93zEgDELwbhhvsOk/view" class="certificate-link" target="_blank">
+                                <i class="bx bx-link-external"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-year">2024</div>
+                        <h3 class="certificate-title">HTML Dasar</h3>
+                        <p class="certificate-issuer">Issued by: Skilvul</p>
+                        <div class="certificate-type">Course</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates-cta" data-aos="fade-up" data-aos-delay="700">
+                <p>Want to see all my certificates?</p>
+                <button class="btn btn-outline" id="view-all-certificates">
+                    <span>View All Certificates</span>
+                    <i class="bx bx-certificate"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My journey</span>
+                <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <div class="timeline-icon">
+                            <i class="bx bx-book"></i>
+                        </div>
+                        <h3 class="timeline-title">University - IDN Politeknik</h3>
+                        <p class="timeline-description">
+                            Currently pursuing further education and skill development in programming, 
+                            focusing on web and mobile application development.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Education</span>
+                            <span class="timeline-tag">Programming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <div class="timeline-icon">
+                            <i class="bx bx-briefcase"></i>
+                        </div>
+                        <h3 class="timeline-title">Residential Supervisor</h3>
+                        <p class="timeline-description">
+                            Supervised dormitory activities, guided students in daily routines and character development, 
+                            and coordinated with staff to ensure discipline and well-being.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Leadership</span>
+                            <span class="timeline-tag">Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Week</div>
+                        <div class="timeline-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+                        <h3 class="timeline-title">IT Teacher & Front-End Developer</h3>
+                        <p class="timeline-description">
+                            Taught HTML and CSS by guiding students through various hands-on projects, 
+                            helping them build practical skills, and assisting in the creation of personalized portfolios.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Teaching</span>
+                            <span class="timeline-tag">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2024</div>
+                        <div class="timeline-icon">
+                            <i class="bx bx-graduation"></i>
+                        </div>
+                        <h3 class="timeline-title">High School - Al-Furqon Al-Islami</h3>
+                        <p class="timeline-description">
+                            Completed secondary education at Al-Furqon Al-Islami Islamic Boarding School in Gresik, 
+                            focusing on character development and religious studies.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Education</span>
+                            <span class="timeline-tag">Character Building</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Let's work together</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 class="contact-title">Let's discuss your project</h3>
+                    <p class="contact-description">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="bx bx-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">Email</h4>
+                                <p class="method-text">muhamnadrifqi1719@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="bx bx-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">Phone</h4>
+                                <p class="method-text">+62 851-5068-7962</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="bx bx-map"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4 class="method-title">Location</h4>
+                                <p class="method-text">Bogor, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4 class="social-title">Follow me on</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/rifqi8567" class="social-link" target="_blank">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhamnadrifqi/" class="social-link" target="_blank">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/Muhamma38832065" class="social-link" target="_blank">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/muhammad_rifqy_/" class="social-link" target="_blank">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <div class="form-focus"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-focus"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                            <div class="form-focus"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                            <div class="form-focus"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span>Send Message</span>
+                            <i class="bx bx-send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Muhammad Rifqi. All rights reserved.</p>
+                    <p>Designed & Built with ❤️ by Muhammad Rifqi</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="bx bx-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
