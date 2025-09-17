@@ -58,17 +58,52 @@ function initializeApp() {
 
 // ===== LOADING SCREEN =====
 function initializeLoading() {
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            isLoading = false;
-            
-            // Start animations after loading
+    const progressFill = document.querySelector('.progress-fill');
+    const progressPercentage = document.querySelector('.progress-percentage');
+    const progressMessage = document.querySelector('.progress-message');
+    
+    let progress = 0;
+    const messages = [
+        'Initializing...',
+        'Loading assets...',
+        'Setting up interface...',
+        'Almost ready...',
+        'Welcome!'
+    ];
+    
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15 + 5;
+        if (progress > 100) progress = 100;
+        
+        progressFill.style.width = progress + '%';
+        progressPercentage.textContent = Math.floor(progress) + '%';
+        
+        // Update message based on progress
+        if (progress < 20) {
+            progressMessage.textContent = messages[0];
+        } else if (progress < 40) {
+            progressMessage.textContent = messages[1];
+        } else if (progress < 60) {
+            progressMessage.textContent = messages[2];
+        } else if (progress < 90) {
+            progressMessage.textContent = messages[3];
+        } else {
+            progressMessage.textContent = messages[4];
+        }
+        
+        if (progress >= 100) {
+            clearInterval(progressInterval);
             setTimeout(() => {
-                startHeroAnimations();
-            }, 500);
-        }, 2000);
-    });
+                loadingScreen.classList.add('hidden');
+                isLoading = false;
+                
+                // Start animations after loading
+                setTimeout(() => {
+                    startHeroAnimations();
+                }, 500);
+            }, 1000);
+        }
+    }, 100);
 }
 
 function startHeroAnimations() {
@@ -832,4 +867,94 @@ initializeScrollReveal();
 
 // Optimize performance
 optimizePerformance();
+
+
+// ===== MOBILE TOUCH EVENTS FOR TECH ITEMS =====
+function initializeMobileTechInteraction() {
+    const techItems = document.querySelectorAll('.tech-item');
+    
+    techItems.forEach(item => {
+        // Touch start event
+        item.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            this.classList.add('touch-active');
+        }, { passive: false });
+        
+        // Touch end event
+        item.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            setTimeout(() => {
+                this.classList.remove('touch-active');
+            }, 300);
+        }, { passive: false });
+        
+        // Touch cancel event
+        item.addEventListener('touchcancel', function(e) {
+            this.classList.remove('touch-active');
+        });
+        
+        // Click event for mobile
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.classList.add('touch-active');
+                setTimeout(() => {
+                    this.classList.remove('touch-active');
+                }, 300);
+            }
+        });
+    });
+}
+
+// Add CSS for touch active state
+const mobileTechStyles = `
+    .tech-item.touch-active {
+        transform: translateY(-5px) rotate(3deg) scale(1.02) !important;
+        border-color: var(--accent-primary) !important;
+        box-shadow: 0 8px 20px rgba(0, 212, 255, 0.15) !important;
+    }
+    
+    .tech-item.touch-active .tech-icon {
+        transform: rotate(-3deg) scale(1.05) !important;
+    }
+    
+    .tech-item.touch-active .tech-icon img,
+    .tech-item.touch-active .tech-icon i {
+        transform: rotate(180deg) scale(1.1) !important;
+        transition: transform 0.4s ease !important;
+    }
+    
+    /* Force animations on mobile */
+    @media (max-width: 768px) {
+        .tech-item {
+            transition: all 0.3s ease !important;
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease !important;
+        }
+        
+        .tech-icon img,
+        .tech-icon i {
+            transition: all 0.4s ease !important;
+        }
+    }
+`;
+
+// Inject mobile tech styles
+const mobileStyleSheet = document.createElement('style');
+mobileStyleSheet.textContent = mobileTechStyles;
+document.head.appendChild(mobileStyleSheet);
+
+// Initialize mobile tech interaction when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileTechInteraction();
+});
+
+// Re-initialize on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+        initializeMobileTechInteraction();
+    }
+});
 
