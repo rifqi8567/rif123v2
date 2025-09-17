@@ -470,12 +470,25 @@ function initializeCursor() {
 
 // ===== PARTICLES =====
 function initializeParticles() {
-    const particlesContainer = document.getElementById('particles');
-    const particleCount = 50;
+    const particleContainers = [
+        'particles',
+        'particles-about',
+        'particles-skills',
+        'particles-projects',
+        'particles-certificates',
+        'particles-experience',
+        'particles-contact'
+    ];
     
-    for (let i = 0; i < particleCount; i++) {
-        createParticle(particlesContainer);
-    }
+    particleContainers.forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                createParticle(container);
+            }
+        }
+    });
 }
 
 function createParticle(container) {
