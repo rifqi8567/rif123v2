@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rifqi | Articles</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modern-animations.css">
+    <link rel="stylesheet" href="assets/css/articles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h1 class="name-text">My Articles</h1>
+            <div class="clock-container">
+                <div class="clock-face">
+                    <div class="hour-hand"></div>
+                    <div class="minute-hand"></div>
+                    <div class="second-hand"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span class="progress-percentage">0%</span>
+                    <span class="progress-message">Loading Articles...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">MRTF</span>
+                    <div class="logo-dot"></div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#about" class="nav-link">
+                    <span class="nav-text">About</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#skills" class="nav-link">
+                    <span class="nav-text">Skills</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#projects" class="nav-link">
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="certificates.html" class="nav-link">
+                    <span class="nav-text">Certificates</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="articles.html" class="nav-link active">
+                    <span class="nav-text">Articles</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bx bx-moon theme-icon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Articles Hero Section -->
+    <section class="articles-hero">
+        <div class="hero-background">
+            <div class="particles" id="particles-articles"></div>
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">
+                    <span class="badge-text">Knowledge Sharing</span>
+                </div>
+                <h1 class="hero-title">
+                    My <span class="gradient-text">Articles</span>
+                </h1>
+                <p class="hero-description">
+                    Explore my thoughts, insights, and experiences in web development, 
+                    mobile app development, and technology trends. Sharing knowledge 
+                    to help fellow developers grow.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Articles Published</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5000">0</div>
+                        <div class="stat-label">Total Reads</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-label">Topics Covered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Filter Section -->
+    <section class="articles-filter">
+        <div class="container">
+            <div class="filter-container" data-aos="fade-up">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <i class="bx bx-grid-alt"></i>
+                        <span>All Articles</span>
+                    </button>
+                    <button class="filter-tab" data-filter="web-development">
+                        <i class="bx bx-code-alt"></i>
+                        <span>Web Development</span>
+                    </button>
+                    <button class="filter-tab" data-filter="mobile-development">
+                        <i class="bx bx-mobile-alt"></i>
+                        <span>Mobile Development</span>
+                    </button>
+                    <button class="filter-tab" data-filter="tutorials">
+                        <i class="bx bx-book-open"></i>
+                        <span>Tutorials</span>
+                    </button>
+                    <button class="filter-tab" data-filter="tech-insights">
+                        <i class="bx bx-bulb"></i>
+                        <span>Tech Insights</span>
+                    </button>
+                </div>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="bx bx-search"></i>
+                        <input type="text" placeholder="Search articles..." id="article-search">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid" id="articles-grid">
+                
+                <!-- Article Card 1 -->
+                <article class="article-card" data-category="web-development" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="assets/images/articles/laravel-api.jpg" alt="Building RESTful APIs with Laravel" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">Dec</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Web Development</span>
+                            <span class="article-read-time">8 min read</span>
+                        </div>
+                        <h3 class="article-title">Building Scalable RESTful APIs with Laravel</h3>
+                        <p class="article-excerpt">
+                            Learn how to create robust and scalable RESTful APIs using Laravel framework, 
+                            including authentication, validation, and best practices.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">API</span>
+                                <span class="tag">PHP</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card" data-category="mobile-development" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="assets/images/articles/flutter-bloc.jpg" alt="State Management in Flutter" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">10</span>
+                                <span class="date-month">Dec</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Mobile Development</span>
+                            <span class="article-read-time">12 min read</span>
+                        </div>
+                        <h3 class="article-title">Mastering State Management in Flutter with BLoC</h3>
+                        <p class="article-excerpt">
+                            Deep dive into BLoC pattern for state management in Flutter applications, 
+                            with practical examples and implementation strategies.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">BLoC</span>
+                                <span class="tag">Dart</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card" data-category="tutorials" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="assets/images/articles/responsive-design.jpg" alt="Responsive Web Design" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">05</span>
+                                <span class="date-month">Dec</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Tutorials</span>
+                            <span class="article-read-time">6 min read</span>
+                        </div>
+                        <h3 class="article-title">Complete Guide to Responsive Web Design</h3>
+                        <p class="article-excerpt">
+                            Step-by-step tutorial on creating responsive websites that work perfectly 
+                            across all devices using modern CSS techniques.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Responsive</span>
+                                <span class="tag">HTML</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card" data-category="tech-insights" data-aos="fade-up" data-aos-delay="300">
+                    <div class="article-image">
+                        <img src="assets/images/articles/ai-development.jpg" alt="AI in Web Development" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">28</span>
+                                <span class="date-month">Nov</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Tech Insights</span>
+                            <span class="article-read-time">10 min read</span>
+                        </div>
+                        <h3 class="article-title">The Future of AI in Web Development</h3>
+                        <p class="article-excerpt">
+                            Exploring how artificial intelligence is transforming web development 
+                            and what developers need to know about this evolving landscape.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Future</span>
+                                <span class="tag">Trends</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="article-card" data-category="web-development" data-aos="fade-up" data-aos-delay="400">
+                    <div class="article-image">
+                        <img src="assets/images/articles/javascript-es6.jpg" alt="Modern JavaScript Features" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">20</span>
+                                <span class="date-month">Nov</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Web Development</span>
+                            <span class="article-read-time">7 min read</span>
+                        </div>
+                        <h3 class="article-title">Modern JavaScript: ES6+ Features You Should Know</h3>
+                        <p class="article-excerpt">
+                            Comprehensive overview of modern JavaScript features including arrow functions, 
+                            destructuring, async/await, and more.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">ES6</span>
+                                <span class="tag">Modern</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="article-card" data-category="mobile-development" data-aos="fade-up" data-aos-delay="500">
+                    <div class="article-image">
+                        <img src="assets/images/articles/flutter-performance.jpg" alt="Flutter Performance Optimization" loading="lazy">
+                        <div class="article-overlay">
+                            <div class="article-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">Nov</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Mobile Development</span>
+                            <span class="article-read-time">9 min read</span>
+                        </div>
+                        <h3 class="article-title">Flutter Performance Optimization Techniques</h3>
+                        <p class="article-excerpt">
+                            Learn essential techniques to optimize your Flutter app performance, 
+                            reduce build times, and improve user experience.
+                        </p>
+                        <div class="article-footer">
+                            <div class="article-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Performance</span>
+                                <span class="tag">Optimization</span>
+                            </div>
+                            <a href="#" class="article-link">
+                                <span>Read More</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container" data-aos="fade-up">
+                <button class="btn btn-outline load-more-btn" id="load-more">
+                    <span>Load More Articles</span>
+                    <i class="bx bx-down-arrow-alt"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated</h2>
+                    <p class="newsletter-description">
+                        Subscribe to get notified about new articles and insights in web and mobile development.
+                    </p>
+                </div>
+                <div class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                        <button class="btn btn-primary newsletter-btn">
+                            <span>Subscribe</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Muhammad Rifqi Thufail Fahmi. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/rifqi8567" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhamnadrifqi/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/Muhamma38832065" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/muhammad_rifqy_/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="bx bx-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/modern-animations.js"></script>
+</body>
+</html>
+

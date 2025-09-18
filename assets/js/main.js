@@ -155,33 +155,50 @@ function startHeroAnimations() {
 function initializeNavigation() {
     // Mobile menu toggle
     mobileToggle.addEventListener('click', toggleMobileMenu);
-    
+
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu
-                navMenu.classList.remove('active');
-                mobileToggle.classList.remove('active');
-                
-                // Update active link
-                updateActiveNavLink(this);
+        link.addEventListener('click', function (e) {
+            const targetHref = this.getAttribute("href");
+
+            // External links (.html)
+            if (targetHref.endsWith(".html")) {
+                e.preventDefault();
+                if (typeof window.CertificateTransition !== 'undefined' && targetHref.includes('certificates.html')) {
+                    const certTransition = new window.CertificateTransition();
+                    certTransition.showTransition(() => {
+                        window.location.href = targetHref;
+                    });
+                } else {
+                    window.location.href = targetHref;
+                }
+                return;
             }
+
+            // Internal links (#id)
+            if (targetHref.startsWith("#")) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetHref);
+
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80; // navbar height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: "smooth"
+                    });
+
+                    // Update active link
+                    updateActiveNavLink(this);
+                }
+            }
+
+            // Close mobile menu if open
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
         });
     });
-    
-    // Scroll spy for navigation
+
+    // Scroll spy
     window.addEventListener('scroll', handleNavbarScroll);
 }
 
