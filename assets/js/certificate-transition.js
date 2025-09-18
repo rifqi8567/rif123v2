@@ -33,39 +33,32 @@ class CertificateTransition {
         }
     }
 
-    setupTransitionTriggers() {
-        // Handle certificate navigation from main page
-        const certificateLinks = document.querySelectorAll('a[href*="certificates"], .nav-link[data-section="certificates"]');
-        
-        certificateLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Check if it's a link to certificates.html (external navigation)
-                if (link.getAttribute('href') === 'certificates.html') {
-                    e.preventDefault();
-                    this.showTransition(() => {
-                        window.location.href = 'certificates.html';
-                    });
-                }
-                // For internal navigation (same page), just show a brief transition
-                else if (link.getAttribute('data-section') === 'certificates') {
-                    this.showBriefTransition();
-                }
+ setupTransitionTriggers() {
+    // === Hanya tombol View All Certificates (class .btn) yang kena animasi ===
+    const viewCertificateButtons = document.querySelectorAll('.btn[href="certificates.html"]');
+    viewCertificateButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.showTransition(() => {
+                window.location.href = 'certificates.html';
             });
         });
+    });
 
-        // Handle "View Certificates" buttons
-        const viewCertificateButtons = document.querySelectorAll('.btn[href*="certificates"]');
-        viewCertificateButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                if (button.getAttribute('href') === 'certificates.html') {
-                    e.preventDefault();
-                    this.showTransition(() => {
-                        window.location.href = 'certificates.html';
-                    });
-                }
-            });
+    // === Link internal ke section certificates (kalau ada di halaman yang sama) ===
+    const sectionLinks = document.querySelectorAll('.nav-link[data-section="certificates"]');
+    sectionLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            this.showBriefTransition();
         });
-    }
+    });
+
+    // === Navbar Certificates ===
+    // Biarkan default behaviour, jangan kasih event listener sama sekali
+    // Jadi klik navbar Certificates akan langsung pindah tanpa animasi
+}
+
+
 
     setupCertificatePageAnimations() {
         // Only run on certificate page
