@@ -11,30 +11,30 @@ class CertificateTransition {
         this.setupCertificatePageAnimations();
     }
 
-    createTransitionOverlay() {
-        // Create transition overlay if it doesn't exist
-        if (!document.querySelector('.certificate-transition')) {
-            const overlay = document.createElement('div');
-            overlay.className = 'certificate-transition';
-            overlay.innerHTML = `
-                <div class="clock-container">
-                    <div class="clock-face">
-                        <div class="hour-hand"></div>
-                        <div class="minute-hand"></div>
-                        <div class="second-hand"></div>
-                        <div class="center-dot"></div>
-                    </div>
+   createTransitionOverlay() {
+    if (!document.querySelector('.certificate-transition')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'certificate-transition';
+        overlay.innerHTML = `
+            <div class="clock-container">
+                <div class="clock-face">
+                    <div class="hour-hand"></div>
+                    <div class="minute-hand"></div>
+                    <div class="second-hand"></div>
+                    <div class="center-dot"></div>
                 </div>
-                <div class="transition-text">
-                    My <span class="gradient-text">Certificates</span>
-                </div>
-            `;
-            document.body.appendChild(overlay);
-        }
+            </div>
+            <div class="transition-text">
+                <span class="dynamic-text">Loading...</span>
+            </div>
+        `;
+        document.body.appendChild(overlay);
     }
+}
 
- setupTransitionTriggers() {
-    // === Hanya tombol View All Certificates (class .btn) yang kena animasi ===
+
+setupTransitionTriggers() {
+    // === Tombol khusus Certificates (masih pakai animasi panjang) ===
     const viewCertificateButtons = document.querySelectorAll('.btn[href="certificates.html"]');
     viewCertificateButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -45,18 +45,47 @@ class CertificateTransition {
         });
     });
 
-    // === Link internal ke section certificates (kalau ada di halaman yang sama) ===
-    const sectionLinks = document.querySelectorAll('.nav-link[data-section="certificates"]');
-    sectionLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            this.showBriefTransition();
+    // === Custom teks untuk beberapa section ===
+    // === Custom teks untuk beberapa section ===
+const sectionNames = {
+    about: "About Me",
+    projects: "My Awesome Projects",
+    contact: "Let’s Talk",
+    skills: "My Skills" // <<< tambahan khusus untuk skills
+};
+
+
+    // === Semua navbar link internal (#section) pakai animasi singkat ===
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                // Cek apakah section ada di dictionary custom
+                let sectionName = sectionNames[targetId];;
+                
+                // Kalau gak ada di dictionary → default "My Section"
+                if (!sectionName) {
+                sectionName = "My " + targetId.charAt(0).toUpperCase() + targetId.slice(1);
+                }
+
+                this.showBriefTransition(sectionName);
+
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
         });
     });
-
-    // === Navbar Certificates ===
-    // Biarkan default behaviour, jangan kasih event listener sama sekali
-    // Jadi klik navbar Certificates akan langsung pindah tanpa animasi
 }
+
+
+
+
 
 
 
@@ -100,17 +129,23 @@ class CertificateTransition {
         }, 3000);
     }
 
-    showBriefTransition() {
-        const overlay = document.querySelector('.certificate-transition');
-        if (!overlay) return;
+    showBriefTransition(sectionName = "Section") {
+    const overlay = document.querySelector('.certificate-transition');
+    if (!overlay) return;
 
-        overlay.classList.add('active');
-        
-        // Shorter animation for same-page navigation
-        setTimeout(() => {
-            overlay.classList.remove('active');
-        }, 1000);
+    // Ubah teks sesuai navbar
+    const dynamicText = overlay.querySelector('.dynamic-text');
+    if (dynamicText) {
+        dynamicText.innerHTML = `<span class="gradient-text">${sectionName}</span>`;
     }
+
+    overlay.classList.add('active');
+
+    setTimeout(() => {
+        overlay.classList.remove('active');
+    }, 1000);
+}
+
 
     animateCertificateCards() {
         const certificateCards = document.querySelectorAll('.certificate-card, .cert-card');

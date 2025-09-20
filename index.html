@@ -23,6 +23,29 @@
     <link rel="stylesheet" href="assets/css/articles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script>
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+
+        // Refresh AOS biar animasi muncul lagi
+        setTimeout(() => {
+          AOS.refresh();
+        }, 600);
+      }
+    });
+  });
+</script>
+
 </head>
 <body class="dark-theme">
     <!-- Loading Screen -->
@@ -76,23 +99,23 @@
             </div>
             
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" data-section="home">
+                <a href="#home" class="nav-link active" data-section="home" data-aos="fade-up">
                     <span class="nav-text">Home</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#about" class="nav-link" data-section="about">
+                <a href="#about" class="nav-link" data-section="about"data-aos="fade-up">
                     <span class="nav-text">About</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#skills" class="nav-link" data-section="skills">
+                <a href="#skills" class="nav-link" data-section="skills"data-aos="fade-up">
                     <span class="nav-text">Skills</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#projects" class="nav-link" data-section="projects">
+                <a href="#projects" class="nav-link" data-section="projects" data-aos="fade-up">
                     <span class="nav-text">Projects</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#certificates" class="nav-link" data-section="certificates">
+                <a href="#certificates" class="nav-link" data-section="certificates" data-aos="fade-up">
                     <span class="nav-text">Certificates</span>
                     <div class="nav-indicator"></div>
                 </a>
@@ -100,11 +123,11 @@
                     <span class="nav-text">Articles</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#experience" class="nav-link" data-section="experience">
+                <a href="#experience" class="nav-link" data-section="experience" data-aos="fade-up">
                     <span class="nav-text">Experience</span>
                     <div class="nav-indicator"></div>
                 </a>
-                <a href="#contact" class="nav-link" data-section="contact">
+                <a href="#contact" class="nav-link" data-section="contact" data-aos="fade-up">
                     <span class="nav-text">Contact</span>
                     <div class="nav-indicator"></div>
                 </a>
