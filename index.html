@@ -1005,38 +1005,63 @@
                     </div>
                 </div>
                 
-                <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                            <div class="form-focus"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                            <div class="form-focus"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input" required>
-                            <div class="form-focus"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                            <div class="form-focus"></div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary form-submit">
-                            <span>Send Message</span>
-                            <i class="bx bx-send"></i>
-                        </button>
-                    </form>
-                </div>
+                <!-- ===== FORM KONTAK ===== -->
+<div class="contact-form-wrapper" data-aos="fade-left">
+  <form class="contact-form" id="contact-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" name="name" class="form-input" required>
+      <div class="form-focus"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Your Email</label>
+      <input type="email" id="email" name="email" class="form-input" required>
+      <div class="form-focus"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="subject" class="form-label">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-input" required>
+      <div class="form-focus"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="message" class="form-label">Your Message</label>
+      <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+      <div class="form-focus"></div>
+    </div>
+
+    <button type="submit" class="btn btn-primary form-submit">
+      <span>Send Message</span>
+      <i class="bx bx-send"></i>
+    </button>
+  </form>
+</div>
+
+<!-- ===== EMAILJS SCRIPT ===== -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // inisialisasi EmailJS dengan Public Key
+  (function() {
+    emailjs.init("j5ukcMBKJprtv00mc"); // Ganti dengan Public Key dari EmailJS
+  })();
+
+  // handle form submit
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_370c0hp", "template_tiwuhgw", this)
+      .then(function() {
+        alert("✅ Pesan berhasil dikirim!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        console.log("FAILED...", error);
+        alert("❌ Gagal mengirim pesan, coba lagi!");
+      });
+  });
+</script>
+
             </div>
         </div>
     </section>
